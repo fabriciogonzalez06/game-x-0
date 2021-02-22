@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gameequiszero": {
+      "hosting": {
+        "gameequiszero": [
+          "gameequiszero"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gameequiszero"
+  }
+}

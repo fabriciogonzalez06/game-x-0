@@ -1,0 +1,29 @@
+<div class="login-container  ">
+      <div class="login-box animate__animated animate__fadeIn ">
+
+
+          <form class="login_form" [formGroup]="frmLogin" >
+
+              <div class="login_img">
+
+                <img  src="assets/images/logo.png" width="100px" alt="logo">
+              </div>
+
+              <label for="email">Email</label>
+              <input formControlName="email"  autocomplete="off" type="email" placeholder="enter your email" name="email"  >
+
+              <label for="password">Password</label>
+              <input formControlName="password" autocomplete="off" placeholder="enter your" type="password" name="password"  >
+
+              <button (click)="login()" *ngIf="!loading" class="login_button click" type="button"> Login </button>
+
+              <div *ngIf="!loading" class="login_footer" >
+
+                <a [routerLink]="['/auth/register']" class="click" >Create a account</a>
+              </div>
+
+              <app-loading *ngIf="loading" ></app-loading>
+
+          </form>
+      </div>
+</div>

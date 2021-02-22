@@ -1,0 +1,98 @@
+$greenbase: #3c683c;
+$greenLight:#43E343;
+
+.register-container {
+  background-color: $greenbase;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-box {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 40px;
+  width: 30%;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"]{
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: black;
+  margin: 10px 0;
+  border-radius: 40px;
+  background-color: white;
+  font-size: 1.1rem;
+  // border: 1px solid gray;
+  box-shadow: 0 7px 7px gray;
+}
+
+.register_form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+
+  .register_img, .register_footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .register_footer{
+    margin-top: 13px;
+    &:hover{
+      font-weight: bold;
+    }
+  }
+
+
+}
+
+.register_button{
+  width: 100%;
+  border: none;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  font-weight: bold;
+  background-color: $greenLight;
+  color: white;
+  border-radius: 40px;
+  box-shadow: 0 7px 7px darken($color: grey, $amount: 10);
+  outline: none;
+
+  &:hover{
+     background-color: darken($color: $greenLight, $amount: 10);
+    box-shadow: 0 7px 7px darken($color: grey, $amount: 20);
+
+  }
+
+}
+
+@media screen and (max-width: 1050px) {
+  .register-box {
+    width: 50%;
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .register-box {
+    width: 90%;
+  }
+
+  .register_form {
+    width: 90%;
+  }
+}

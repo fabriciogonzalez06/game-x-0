@@ -1,0 +1,21 @@
+<aside id="sidebar" >
+
+  <div class="sidebar_content">
+
+    <div class="sidebar_image">
+        <img width="100px" src="assets/images/logo.png" alt="Logo">
+    </div>
+
+    <ul>
+       <li> <i style="margin-right: 5px;" class="fa fa-chess-rook"></i> <a [routerLink]="['/']" >Game room</a> </li>
+       <li> <i style="margin-right: 5px;"  class="fa fa-user"></i> <a [routerLink]="['/profile']" > My profile </a> </li>
+       <li> <i style="margin-right: 5px;"  class="fa fa-history"></i> <a [routerLink]="['/games-played']" >My history</a></li>
+       <li> <i style="margin-right: 5px;"  class="fa fa-sign-out-alt"></i> <a (click)="logout()" >Logout</a></li>
+    </ul>
+
+    <div (click)="showInfoProgrammer()" class="sidebar_content_data click" >
+          <p class="click">programmer info</p>
+    </div>
+
+  </div>
+</aside>

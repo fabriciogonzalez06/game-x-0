@@ -1,0 +1,42 @@
+<div class="home_content">
+
+  <div class="home_item">
+    <div class="home_item_header">
+      <p>Connected players</p>
+    </div>
+    <div class="home_item_content">
+      <div style="height: auto;">
+        <div class="home_item_player  " *ngFor="let u of (_userService.connectedUsers$ |async)">
+          <div [ngClass]="{'circle_online': !u.playin && true,'circle_busy':u.playing &&true}"  class="circle"></div>
+          <p> {{u.name}} </p>
+          <button (click)="sendInvitation(u)" type="button">challenge</button>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class="home_item">
+    <div class="home_item_header">
+      <p>Invitation box</p>
+    </div>
+    <div class="home_item_content">
+      <div class="home_challenger" *ngFor="let invitation of _playerService.myInvitations$ |async" >
+        <div class="chllanger_data">
+          <i class="em em-fire" aria-role="presentation" aria-label="FIRE"></i>
+          <div>
+            <p> {{invitation.userFrom.name}}  </p>
+            <p>challenge you to a duel to <strong>{{invitation.rounds}} </strong> rounds </p>
+          </div>
+        </div>
+        <div class="challanger_actions">
+          <button (click)="acceptInvitation(invitation)" type="button" class="accept">Accept</button>
+          <button (click)="rejectInvitation(invitation)" class="reject"> Reject</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

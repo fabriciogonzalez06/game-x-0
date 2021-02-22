@@ -1,0 +1,30 @@
+<div class="profile_content">
+
+  <div class="profile_item">
+      <div class="profile_item_content" >
+
+        <div class="profile_header">Profile</div>
+        <div class="profile_name" >
+          <div class="circle_online" ></div>
+          <p style="margin-left: 5px;"> {{name}} </p>
+        </div>
+
+        <input autocomplete="off" name="name" [(ngModel)]="name" type="text" placeholder="enter your name"  >
+        <button (click)="saveName()" type="button">Save</button>
+      </div>
+
+
+
+
+  </div>
+  <div class="profile_item">
+
+    <div class="profile_item_content" >
+
+      <input type="password" [(ngModel)]="password.password" placeholder="enter your password"  >
+      <input type="password" [(ngModel)]="password.password2"  placeholder="confirm your password"  >
+      <button (click)="updatePassword()" type="button">Save</button>
+    </div>
+  </div>
+
+</div>
